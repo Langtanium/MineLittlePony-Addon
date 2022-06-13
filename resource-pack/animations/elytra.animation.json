@@ -1,0 +1,105 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.elytra.default": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": ["85 * (variable.minelp_pony == 1.0)", 0, 0],
+					"position": [0, "2.5 * (variable.minelp_pony == 1.0)", "-4 * (variable.minelp_pony == 1.0)"],
+					"scale": 1.067
+				},
+				"left_wing": {
+					"rotation": [15, 0, -13],
+					"position": [4.5, 4, -2],
+					"scale": [1, 1, 2]
+				},
+				"right_wing": {
+					"rotation": [15, 0, 13],
+					"position": [-4.5, 4, -2],
+					"scale": [1, 1, 2]
+				}
+			}
+		},
+		"animation.elytra.gliding": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": ["80 * (variable.minelp_pony == 1.0)", 0, 0],
+					"position": [0, "2.5 * (variable.minelp_pony == 1.0)", "-4 * (variable.minelp_pony == 1.0)"],
+					"scale": 1.067
+				},
+				"left_wing": {
+					"rotation": ["variable.ratio = (query.position_delta(1) < 0) ? 1 - math.pow(-query.movement_direction(1), 1.5) : 1; return math.lerp(15, 20, variable.ratio);", 0, "math.lerp(-15, -90, variable.ratio)"],
+					"position": [2, 2, -2],
+					"scale": [1, 1, 2]
+				},
+				"right_wing": {
+					"rotation": ["variable.ratio = (query.position_delta(1) < 0) ? 1 - math.pow(-query.movement_direction(1), 1.5) : 1; return math.lerp(15, 20, variable.ratio);", 0, "math.lerp(15, 90, variable.ratio)"],
+					"position": [-2, 2, -2],
+					"scale": [1, 1, 2]
+				}
+			}
+		},
+		"animation.elytra.sneaking": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": ["85 * (variable.minelp_pony == 1.0)", 0, 0],
+					"position": [0, "2.5 * (variable.minelp_pony == 1.0)", "-4 * (variable.minelp_pony == 1.0)"],
+					"scale": 1.067
+				},
+				"left_wing": {
+					"rotation": [20, -15, -45],
+					"position": [2, 3, -2],
+					"scale": [1, 1, 2]
+				},
+				"right_wing": {
+					"rotation": [20, 15, 45],
+					"position": [-2, 3, -2],
+					"scale": [1, 1, 2]
+				}
+			}
+		},
+		"animation.elytra.sleeping": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": ["85 * (variable.minelp_pony == 1.0)", 0, 0],
+					"position": [0, "2.5 * (variable.minelp_pony == 1.0)", "-4 * (variable.minelp_pony == 1.0)"],
+					"scale": 1.067
+				},
+				"left_wing": {
+					"rotation": [0, 0, -15],
+					"position": [5, 4, -2],
+					"scale": [1, 1, 2]
+				},
+				"right_wing": {
+					"rotation": [0, 0, 15],
+					"position": [-5, 4, -2],
+					"scale": [1, 1, 2]
+				}
+			}
+		},
+		"animation.elytra.swimming": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": ["85 * (variable.minelp_pony == 1.0)", 0, 0],
+					"position": [0, "2.5 * (variable.minelp_pony == 1.0)", "-4 * (variable.minelp_pony == 1.0)"],
+					"scale": 1.067
+				},
+				"left_wing": {
+					"rotation": ["query.swim_amount * 15", 0, -15],
+					"position": [5, 2, -2],
+					"scale": [1, 1, 2]
+				},
+				"right_wing": {
+					"rotation": ["query.swim_amount * 15", 0, 15],
+					"position": [-5, 2, -2],
+					"scale": [1, 1, 2]
+				}
+			}
+		}
+	}
+}

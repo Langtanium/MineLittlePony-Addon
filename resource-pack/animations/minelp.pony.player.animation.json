@@ -1,0 +1,407 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.bob.inverted": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [0, 0, "variable.hand_bob.inverted"]
+				},
+				"rightArm": {
+					"rotation": [0, 0, "-variable.hand_bob.inverted"]
+				}
+			}
+		},
+		"animation.player.bow_equipped": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": ["(-90.0 + query.target_x_rotation - query.is_sneaking * 15.0 - this) * (variable.minelp.horn_type == 0)", "(0.5 + query.target_y_rotation) * (variable.minelp.horn_type == 0)", 0],
+					"position": [0, 0, "3 * (variable.minelp.horn_type == 0)"]
+				},
+				"rightArm": {
+					"rotation": ["(-90.0 + query.target_x_rotation - query.is_sneaking * 15.0 - this) * (variable.minelp.horn_type == 0)", "(-5.0 + query.target_y_rotation) * (variable.minelp.horn_type == 0)", 0]
+				},
+				"rightItem": {
+					"rotation": ["(-90.0 + query.target_x_rotation - query.is_sneaking * 15.0 - this) * (variable.minelp.horn_type > 0)", "(query.target_y_rotation) * (variable.minelp.horn_type > 0) - (10 * (variable.minelp.horn_type == 0))", 0]
+				}
+			}
+		},
+		"animation.player.glide": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": ["variable.tcos0", 0, 0]
+				},
+				"leftLeg": {
+					"rotation": ["-variable.tcos0", 0, 0]
+				},
+				"rightArm": {
+					"rotation": ["-variable.tcos0", 0, 0]
+				},
+				"rightLeg": {
+					"rotation": ["variable.tcos0", 0, 0]
+				},
+				"waist": {
+					"rotation": [-90, 0, 0]
+				}
+			}
+		},
+		"animation.player.cape": {
+			"loop": true,
+			"bones": {
+				"cape": {
+					"rotation": ["math.lerp(0.0, -126.0, query.cape_flap_amount) - 6.0 - 84", 0, 0],
+					"position": [0, "query.get_root_locator_offset('armor_offset.default_neck', 1) + 2", -4]
+				}
+			}
+		},
+		"animation.player.crossbow_equipped": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": ["(-this - 105.0 - 0.7584 - (1.0 - variable.item_use_normalized) * 5.0) * (variable.minelp.horn_type == 0)", "(-this - 16.746 + (1.0 - variable.item_use_normalized) * 30.0) * (variable.minelp.horn_type == 0)", "(-this + 8.0 - 0.6442 + (1.0 - variable.item_use_normalized) * 10.0) * (variable.minelp.horn_type == 0)"],
+					"position": [0, 0, 0.5]
+				},
+				"rightArm": {
+					"rotation": ["(- 90.0 - this) * (variable.minelp.horn_type == 0)", "(-0.0 - this) * (variable.minelp.horn_type == 0)", "(-0.0 - this) * (variable.minelp.horn_type == 0)"]
+				}
+			}
+		},
+		"animation.player.crossbow_hold": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": ["(query.is_swimming ? 0.0 : -93.0 + query.target_x_rotation - query.is_sneaking * 27.0 -this) * (variable.minelp.horn_type == 0)", "(query.is_swimming ? 0.0 : 0.0 + math.clamp(query.target_y_rotation, -45.0, 5.0) -this) * (variable.minelp.horn_type == 0)", "query.is_sneaking * -15.0 * (variable.minelp.horn_type == 0)"]
+				},
+				"rightArm": {
+					"rotation": ["(query.is_swimming ? 0.0 : -93.0 + query.target_x_rotation - query.is_sneaking * 27.0 -this) * (variable.minelp.horn_type == 0)", "(query.is_swimming ? 0.0 : math.clamp(query.target_y_rotation, -60.0, 45.0) -this) * (variable.minelp.horn_type == 0)", 0]
+				}
+			}
+		},
+		"animation.player.holding": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": ["(variable.is_holding_left ? (-this * 0.5 - 18.0) : 0.0) * (variable.minelp.horn_type == 0)", 0, 0]
+				},
+				"rightArm": {
+					"rotation": ["(variable.is_holding_right ? (-this * 0.5 - 18.0) : 0.0) * (variable.minelp.horn_type == 0)", 0, 0]
+				}
+			}
+		},
+		"animation.player.riding.arms": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": [-36, 0, 0]
+				},
+				"rightarm": {
+					"rotation": [-36, 0, 0]
+				}
+			}
+		},
+		"animation.player.riding.legs": {
+			"loop": true,
+			"bones": {
+				"leftleg": {
+					"rotation": ["-72.0 - this", "-18.0 - this", "-this"]
+				},
+				"rightleg": {
+					"rotation": ["-72.0 - this", "18.0 - this", "-this"]
+				}
+			}
+		},
+		"animation.player.shield_block_main_hand": {
+			"loop": true,
+			"bones": {
+				"rightArm": {
+					"rotation": ["-40 * (variable.minelp.horn_type == 0) * !variable.is_first_person", "-30 * (variable.minelp.horn_type == 0) * !variable.is_first_person", "-5 * (variable.minelp.horn_type == 0) * !variable.is_first_person"]
+				},
+				"rightItem": {
+					"rotation": [0, -60, -45],
+					"position": [-1, -3, 0]
+				}
+			}
+		},
+		"animation.player.shield_block_off_hand": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": ["-40 * (variable.minelp.horn_type == 0) * !variable.is_first_person", "20 * (variable.minelp.horn_type == 0) * !variable.is_first_person", 0]
+				},
+				"leftItem": {
+					"rotation": ["query.item_is_charged * 30.0", "70.0 - query.item_is_charged * 60.0", "65.0 - query.item_is_charged * 15.0"],
+					"position": ["1.0 + query.item_is_charged * 1.5", "-3.0 + query.item_is_charged", 0]
+				}
+			}
+		},
+		"animation.player.sleeping": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"head": {
+					"rotation": ["10.0 - this", "80-this", "-this"],
+					"position": [0, -1, 0]
+				},
+				"root": {
+					"rotation": [0, "90.0 - query.sleep_rotation - query.body_y_rotation", 0],
+					"position": ["12.0 * math.cos(query.body_y_rotation) * math.cos(query.sleep_rotation) - 24.0 * math.sin(query.body_y_rotation) * math.sin(query.sleep_rotation)", -11, "24.0 * math.cos(query.body_y_rotation) * math.sin(query.sleep_rotation) + 24.0 * math.sin(query.body_y_rotation) * math.cos(query.sleep_rotation)"]
+				},
+				"leftArm": {
+					"rotation": [-90, 0, 0],
+					"position": [1, 0, 0]
+				},
+				"rightArm": {
+					"rotation": ["-90", 0, 0],
+					"position": [-1, 0, 0]
+				},
+				"leftLeg": {
+					"rotation": [90, 0, 0],
+					"position": [1, 0, 0]
+				},
+				"rightLeg": {
+					"rotation": [90, 0, 0],
+					"position": [-1, 0, 0]
+				}
+			}
+		},
+		"animation.player.shield.right": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				}
+			}
+		},
+		"animation.player.shield.right.magic": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				}
+			}
+		},
+		"animation.player.shield.left": {
+			"loop": true,
+			"bones": {
+				"leftItem": {
+					"rotation": [-90, 0, 90],
+					"position": [-1, 5, -1]
+				}
+			}
+		},
+		"animation.player.shield.left.magic": {
+			"loop": true,
+			"bones": {
+				"leftItem": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				}
+			}
+		},
+		"animation.player.pony.sneaking": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"position": [0, "-1 * !query.is_sprinting", 0]
+				},
+				"leftArm": {
+					"rotation": ["-35 * !query.is_sprinting", 0, 0],
+					"position": ["4 * !query.is_sprinting", "6 * !query.is_sprinting", "1 * !query.is_sprinting"]
+				},
+				"leftLeg": {
+					"rotation": ["-15 * !query.is_sprinting", 0, 0],
+					"position": ["4 * !query.is_sprinting", "4 * !query.is_sprinting", "2 * !query.is_sprinting"]
+				},
+				"rightArm": {
+					"rotation": ["-35 * !query.is_sprinting", 0, 0],
+					"position": ["-4 * !query.is_sprinting", "6 * !query.is_sprinting", "1 * !query.is_sprinting"]
+				},
+				"rightLeg": {
+					"rotation": ["-15 * !query.is_sprinting", 0, 0],
+					"position": ["-4 * !query.is_sprinting", "4 * !query.is_sprinting", "2 * !query.is_sprinting"]
+				},
+				"root": {
+					"position": [0, "-6 * !query.is_sprinting", 0]
+				},
+				"waist": {
+					"rotation": ["20 * !query.is_sprinting", 0, 0]
+				},
+				"tail": {
+					"rotation": ["-20 * !query.is_sprinting", 0, 0]
+				},
+				"body": {
+					"rotation": ["-5 * !query.is_sprinting", 0, 0]
+				},
+				"tailBody": {
+					"rotation": ["5 * !query.is_sprinting", 0, 0]
+				},
+				"leftWingOpened": {
+					"rotation": [0, "5 * !query.is_sprinting", "10 * !query.is_sprinting"]
+				},
+				"rightWingOpened": {
+					"rotation": [0, "-5 * !query.is_sprinting", "-10 * !query.is_sprinting"]
+				},
+				"leftBatWingOpened": {
+					"rotation": ["20 * !query.is_sprinting", 0, "10 * !query.is_sprinting"]
+				},
+				"rightBatWingOpened": {
+					"rotation": ["20 * !query.is_sprinting", 0, "-10 * !query.is_sprinting"]
+				}
+			}
+		},
+		"animation.player.long_neck": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"position": [0, 1, 0]
+				}
+			}
+		},
+		"animation.player.swim": {
+			"loop": true,
+			"animation_length": 1.3,
+			"override_previous_animation": true,
+			"bones": {
+				"leftArm": {
+					"rotation": {
+						"0.0": ["-90 * (variable.minelp_ispony == 1.0)", "180 * (variable.minelp_ispony == 0.0)", "180 * (variable.minelp_ispony == 0.0)"],
+						"0.7": ["40 * (variable.minelp_ispony == 1.0)", "180 * (variable.minelp_ispony == 0.0)", "(-10 * (variable.minelp_ispony == 1.0)) + (287.2 * (variable.minelp_ispony == 0.0))"],
+						"1.1": ["90 * (variable.minelp_ispony == 0.0)", "180 * (variable.minelp_ispony == 0.0)", "(-90 * (variable.minelp_ispony == 1.0)) + (180 * (variable.minelp_ispony == 0.0))"],
+						"1.3": ["-90 * (variable.minelp_ispony == 1.0)", "180 * (variable.minelp_ispony == 0.0)", "180 * (variable.minelp_ispony == 0.0)"]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": ["-90 * (variable.minelp_ispony == 1.0)", "180 * (variable.minelp_ispony == 0.0)", "-180 * (variable.minelp_ispony == 0.0)"],
+						"0.7": ["40 * (variable.minelp_ispony == 1.0)", "180 * (variable.minelp_ispony == 0.0)", "(10 * (variable.minelp_ispony == 1.0)) + (-287.2 * (variable.minelp_ispony == 0.0))"],
+						"1.1": ["90 * (variable.minelp_ispony == 0.0)", "180 * (variable.minelp_ispony == 0.0)", "(90 * (variable.minelp_ispony == 1.0)) + (-180 * (variable.minelp_ispony == 0.0))"],
+						"1.3": ["-90 * (variable.minelp_ispony == 1.0)", "180 * (variable.minelp_ispony == 0.0)", "-180 * (variable.minelp_ispony == 0.0)"]
+					}
+				},
+				"root": {
+					"rotation": ["variable.swim_amount * (90 * (variable.minelp_ispony == 0.0) + query.target_x_rotation)", 0, 0],
+					"position": [0, "(math.sin(query.target_x_rotation) * 24.0 + 3.0) * variable.swim_amount * (variable.minelp_ispony == 0.0)", "(math.cos(query.target_x_rotation) * 24.0 + 9.0) * variable.swim_amount * (variable.minelp_ispony == 0.0)"]
+				},
+				"body": {
+					"position": [0, "-12 * (variable.minelp_ispony == 1.0)", 0]
+				},
+				"tailBody": {
+					"rotation": [40, 0, 0]
+				}
+			}
+		},
+		"animation.player.swim.head": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [20, 0, 0]
+				}
+			}
+		},
+		"animation.player.swim.legs": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"leftLeg": {
+					"rotation": ["90 * (variable.minelp_ispony == 1.0) + math.lerp(0.0, math.cos(query.life_time * 390.0 + 180.0) * 17.2, variable.swim_amount)", 0, 0],
+					"position": [0, 0, "3 * (variable.minelp_ispony == 1)"]
+				},
+				"rightLeg": {
+					"rotation": ["90 * (variable.minelp_ispony == 1.0) + math.lerp(0.0, math.cos(query.life_time * 390.0) * 17.2, variable.swim_amount)", 0, 0],
+					"position": [0, 0, "3 * (variable.minelp_ispony == 1)"]
+				}
+			}
+		},
+		"animation.player.fly": {
+			"loop": true,
+			"bones": {
+				"leftWingOpened": {
+					"rotation": [0, 0, "90 - (math.cos(query.life_time * 400) * 65)"]
+				},
+				"rightWingOpened": {
+					"rotation": [0, 0, "-90 + (math.cos(query.life_time * 400) * 65)"]
+				},
+				"leftBatWingOpened": {
+					"rotation": [0, 0, "90 - (math.cos(query.life_time * 400) * 65)"]
+				},
+				"rightBatWingOpened": {
+					"rotation": [0, 0, "-90 + (math.cos(query.life_time * 400) * 65)"]
+				},
+				"leftBugWing": {
+					"rotation": [0, 0, "60 - (math.cos(query.life_time * 400) * 65)"]
+				},
+				"rightBugWing": {
+					"rotation": [0, 0, "-60 + (math.cos(query.life_time * 400) * 65)"]
+				}
+			}
+		},
+		"animation.player.fly.sprint": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [-90, -15, 0],
+					"position": [0, 1, -1]
+				},
+				"rightArm": {
+					"rotation": [-90, 15, 0],
+					"position": [0, 1, -1]
+				},
+				"leftLeg": {
+					"rotation": [90, 15, 0],
+					"position": [0, 3, 3]
+				},
+				"rightLeg": {
+					"rotation": [90, -15, 0],
+					"position": [0, 3, 3]
+				}
+			}
+		},
+		"animation.player.fly.move": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [-20, -10, 0],
+					"position": [0, 0, -1]
+				},
+				"rightArm": {
+					"rotation": [-20, 10, 0],
+					"position": [0, 0, -1]
+				},
+				"leftLeg": {
+					"rotation": [20, 10, 0],
+					"position": [0, 0, 1.5]
+				},
+				"rightLeg": {
+					"rotation": [20, -10, 0],
+					"position": [0, 0, 1.5]
+				}
+			}
+		},
+		"animation.player.seapony": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": ["-80 * !query.is_swimming", "-10 * !query.is_swimming", "-((math.cos(query.life_time * 103.2) * 2.865) + 2.865) * !query.is_swimming"],
+					"position": ["2 * !query.is_swimming", "2 * !query.is_swimming", 0]
+				},
+				"rightArm": {
+					"rotation": ["-80 * !query.is_swimming", "10 * !query.is_swimming", "((math.cos(query.life_time * 103.2) * 2.865) + 2.865) * !query.is_swimming"],
+					"position": ["-2 * !query.is_swimming", "2 * !query.is_swimming", 0]
+				},
+				"fishTail": {
+					"rotation": ["(math.cos(query.life_time * 300) * 10)", 0, 0]
+				},
+				"tip": {
+					"rotation": ["(math.cos(query.life_time * 300) * 10)", 0, 0]
+				},
+				"fins": {
+					"rotation": ["(math.cos(query.life_time * 300) * 10)", 0, 0]
+				}
+			}
+		}
+	}
+}

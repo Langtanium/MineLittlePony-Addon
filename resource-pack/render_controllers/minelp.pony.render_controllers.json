@@ -1,0 +1,43 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.minelp.pony": {
+            "geometry": "Geometry.minelp.default",
+            "part_visibility": [
+                { "*": 1 },
+				{ "leftWingClosed": "variable.minelp.wing_type == 1" },
+				{ "rightWingClosed": "variable.minelp.wing_type == 1" },
+				{ "leftBatWingClosed": "variable.minelp.wing_type == 2" },
+				{ "rightBatWingClosed": "variable.minelp.wing_type == 2" },
+				{ "leftBugWing": "variable.minelp.wing_type == 3" },
+				{ "leftWingSecondary": "variable.minelp.wing_type == 3" },
+				{ "rightBugWing": "variable.minelp.wing_type == 3" },
+				{ "rightWingSecondary": "variable.minelp.wing_type == 3" },
+				{ "snoutMale": "variable.minelp.muzzle_type == 1" },
+				{ "snoutFemale": "variable.minelp.muzzle_type == 2" },
+				{ "bristles": "variable.minelp.zebra_mane == 1" },
+				{ "bristles2": "variable.minelp.zebra_mane == 1" },
+				{ "tailBody": "variable.minelp.tail_length >= 0.25" },
+				{ "tail2": "variable.minelp.tail_length >= 0.5" },
+				{ "tail3": "variable.minelp.tail_length >= 0.75" },
+				{ "tail4": "variable.minelp.tail_length == 1" },
+                { "horn": "variable.minelp.horn_type > 0" },
+                { "hornGlow": 0 }
+            ],
+            "materials": [
+                { "*": "Material.minelp.default" }
+            ],
+            "textures": [ "Texture.minelp.default" ]
+        },
+        "controller.render.minelp.pony.stray_clothes": {
+            "geometry": "Geometry.minelp.overlay",
+            "part_visibility": [
+                { "*": 1 }
+            ],
+            "materials": [
+                { "*": "Material.minelp.overlay" }
+            ],
+            "textures": [ "Texture.minelp.overlay" ]
+        }
+    }
+}

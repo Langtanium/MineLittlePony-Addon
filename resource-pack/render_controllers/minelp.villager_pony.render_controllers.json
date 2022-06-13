@@ -1,0 +1,219 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.villager_pony_base": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.minelp.base",
+            "Texture.minelp.base2",
+            "Texture.minelp.base3",
+            "Texture.minelp.base4",
+            "Texture.minelp.base5",
+            "Texture.minelp.base6"
+          ]
+        }
+      },
+      "geometry": "Geometry.minelp.default",
+      "materials": [
+        { "*": "Material.minelp.default" }
+      ],
+      "part_visibility": [
+        { "*": "variable.profession_index == 0" },
+		{ "leftWingClosed": "variable.minelp.wing_type == 1 && variable.profession_index == 0" },
+		{ "rightWingClosed": "variable.minelp.wing_type == 1 && variable.profession_index == 0" },
+		{ "leftBatWingClosed": "variable.minelp.wing_type == 2" },
+		{ "rightBatWingClosed": "variable.minelp.wing_type == 2" },
+		{ "leftBugWing": "variable.minelp.wing_type == 3" },
+		{ "leftWingSecondary": "variable.minelp.wing_type == 3" },
+		{ "rightBugWing": "variable.minelp.wing_type == 3" },
+		{ "rightWingSecondary": "variable.minelp.wing_type == 3" },
+		{ "snoutMale": "variable.minelp.muzzle_type == 1" },
+		{ "snoutFemale": "variable.minelp.muzzle_type == 2" },
+		{ "bristles": "variable.minelp.zebra_mane == 1" },
+		{ "bristles2": "variable.minelp.zebra_mane == 1" },
+        { "horn": "variable.minelp.horn_type > 0" },
+        { "hornGlow": 0 }
+      ],
+      "textures": [
+        "Array.skins[query.skin_id]"
+      ]
+    },
+    "controller.render.villager_pony_job": {
+      "arrays": {
+        "textures": {
+		  "Array.plains": [
+            "Texture.minelp.unskilled.plains",
+            "Texture.minelp.farmer.plains",
+            "Texture.minelp.fisherman.plains",
+            "Texture.minelp.shepherd.plains",
+            "Texture.minelp.fletcher.plains",
+            "Texture.minelp.librarian.plains",
+            "Texture.minelp.cartographer.plains",
+            "Texture.minelp.cleric.plains",
+            "Texture.minelp.armorer.plains",
+            "Texture.minelp.weapon_smith.plains",
+            "Texture.minelp.tool_smith.plains",
+            "Texture.minelp.butcher.plains",
+            "Texture.minelp.leatherworker.plains",
+            "Texture.minelp.stonemason.plains",
+            "Texture.minelp.nitwit.plains"
+          ]
+        }
+      },
+      "geometry": "Geometry.minelp.default",
+      "materials": [
+        { "*": "Material.minelp.default" }
+      ],
+      "part_visibility": [
+        { "*": "(!query.is_baby || variable.profession_index != 0)" },
+		{ "leftWingClosed": "variable.profession_index == 3 || variable.profession_index == 7" },
+		{ "rightWingClosed": "variable.profession_index == 3 || variable.profession_index == 7" },
+		{ "leftBatWingClosed": "variable.minelp.wing_type == 2" },
+		{ "rightBatWingClosed": "variable.minelp.wing_type == 2" },
+		{ "leftBugWing": false },
+		{ "leftWingSecondary": false },
+		{ "rightBugWing": false },
+		{ "rightWingSecondary": false },
+		{ "snoutMale": "variable.minelp.muzzle_type == 1" },
+		{ "snoutFemale": "variable.minelp.muzzle_type == 2" },
+		{ "bristles": false },
+		{ "bristles2": false },
+        { "horn": "(variable.profession_index == 6 || variable.profession_index == 8 || variable.profession_index == 9 || variable.profession_index == 10)" },
+        { "hornGlow": 0 }
+      ],
+      "textures": [
+        "Array.plains[variable.profession_index]"
+      ]
+    },
+    "controller.render.villager_pony_job.savanna": {
+      "arrays": {
+        "textures": {
+		  "Array.savanna": [
+            "Texture.minelp.unskilled.savanna",
+            "Texture.minelp.farmer.savanna",
+            "Texture.minelp.fisherman.savanna",
+            "Texture.minelp.shepherd.savanna",
+            "Texture.minelp.fletcher.savanna",
+            "Texture.minelp.librarian.savanna",
+            "Texture.minelp.cartographer.savanna",
+            "Texture.minelp.cleric.savanna",
+            "Texture.minelp.armorer.savanna",
+            "Texture.minelp.weapon_smith.savanna",
+            "Texture.minelp.tool_smith.savanna",
+            "Texture.minelp.butcher.savanna",
+            "Texture.minelp.leatherworker.savanna",
+            "Texture.minelp.stonemason.savanna",
+            "Texture.minelp.nitwit.savanna"
+          ]
+        }
+      },
+      "geometry": "Geometry.minelp.default",
+      "materials": [
+        { "*": "Material.minelp.default" }
+      ],
+      "part_visibility": [
+        { "*": "(!query.is_baby && query.mark_variant == 3.0) || (variable.profession_index != 0 && query.mark_variant == 3.0)" },
+		{ "leftWingClosed": false },
+		{ "rightWingClosed": false },
+		{ "leftBatWingClosed": "query.mark_variant == 3.0" },
+		{ "rightBatWingClosed": "query.mark_variant == 3.0" },
+		{ "leftBugWing": false },
+		{ "leftWingSecondary": false },
+		{ "rightBugWing": false },
+		{ "rightWingSecondary": false },
+		{ "snoutMale": "variable.minelp.muzzle_type == 1" },
+		{ "snoutFemale": "variable.minelp.muzzle_type == 2" },
+		{ "bristles": false },
+		{ "bristles2": false },
+        { "horn": false },
+        { "hornGlow": 0 }
+      ],
+      "textures": [
+        "Array.savanna[variable.profession_index]"
+      ]
+    },
+    "controller.render.villager_pony_masked": {
+      "arrays": {
+        "textures": {
+          "Array.biomes": [ 
+            "Texture.minelp.plains",
+            "Texture.minelp.desert",
+            "Texture.minelp.jungle",
+            "Texture.minelp.savanna",
+            "Texture.minelp.snow",
+            "Texture.minelp.swamp",
+            "Texture.minelp.taiga"
+          ],
+          "Array.professions": [
+            "Texture.minelp.unskilled",
+            "Texture.minelp.farmer",
+            "Texture.minelp.fisherman",
+            "Texture.minelp.shepherd",
+            "Texture.minelp.fletcher",
+            "Texture.minelp.librarian",
+            "Texture.minelp.cartographer",
+            "Texture.minelp.cleric",
+            "Texture.minelp.armorer",
+            "Texture.minelp.weapon_smith",
+            "Texture.minelp.tool_smith",
+            "Texture.minelp.butcher",
+            "Texture.minelp.leatherworker",
+            "Texture.minelp.stonemason",
+            "Texture.minelp.nitwit"
+          ]
+        }
+      },
+      "geometry": "Geometry.minelp.default",
+      "materials": [
+        { "*": "(query.is_baby || variable.profession_index == 0) ? Material.minelp.default : Material.minelp.masked" }
+      ],
+      "part_visibility": [
+        { "*": 1 },
+		{ "leftWingClosed": "variable.profession_index == 3 || variable.profession_index == 7" },
+		{ "rightWingClosed": "variable.profession_index == 3 || variable.profession_index == 7" },
+		{ "leftBatWingClosed": "variable.minelp.wing_type == 2" },
+		{ "rightBatWingClosed": "variable.minelp.wing_type == 2" },
+		{ "leftBugWing": false },
+		{ "leftWingSecondary": false },
+		{ "rightBugWing": false },
+		{ "rightWingSecondary": false },
+		{ "snoutMale": "variable.minelp.muzzle_type == 1" },
+		{ "snoutFemale": "variable.minelp.muzzle_type == 2" },
+		{ "bristles": false },
+		{ "bristles2": false },
+        { "horn": "variable.minelp.horn_type > 0" },
+        { "hornGlow": 0 }
+      ],
+      "textures": [
+        "Array.biomes[query.mark_variant]",
+        "Array.professions[variable.profession_index]"
+      ]
+    },
+    "controller.render.villager_pony_level": {
+      "arrays": {
+        "textures": {
+          "Array.levels": [
+            "Texture.minelp.level_stone",
+            "Texture.minelp.level_iron",
+            "Texture.minelp.level_gold",
+            "Texture.minelp.level_emerald",
+            "Texture.minelp.level_diamond"
+          ]
+        }
+      },
+      "rebuild_animation_matrices": true,
+      "geometry": "Geometry.minelp.default",
+      // If we are not babies, unskilled, or nitwits we can have a job level
+      "part_visibility": [
+        { "*": "!query.is_baby && variable.profession_index != 0 && variable.profession_index != 14" }
+      ],
+      "materials": [
+        { "*": "Material.minelp.default" }
+      ],
+      "textures": [
+        "Array.levels[variable.level_index]"
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.pony.enderman": {
+      "arrays": {
+        "materials": {
+          "Array.materials": [ "Material.minelp.default", "Material.invisible" ]
+        }
+      },
+       "geometry": "Geometry.minelp.default",
+       "part_visibility": [
+           { "*": 1 },
+           { "horn": "variable.minelp.horn_type > 0" },
+           { "hornGlow": 0 }
+       ],
+       "materials": [ { "*": "Array.materials[query.is_invisible]" } ],
+       "textures": [ "Texture.minelp.default" ]
+    },
+    "controller.render.pony.enderman_eyes": {
+      "arrays": {
+        "materials": {
+          "Array.materials": [ "Material.minelp.default", "Material.invisible" ]
+        }
+      },
+       "geometry": "Geometry.minelp.default",
+       "part_visibility": [
+           { "*": 1 },
+           { "horn": "variable.minelp.horn_type > 0" },
+           { "hornGlow": 0 }
+       ],
+       "materials": [ { "*": "Array.materials[query.is_invisible]" } ],
+       "textures": [ "Texture.minelp.eyes" ],
+       "ignore_lighting": true
+    }
+  }
+}

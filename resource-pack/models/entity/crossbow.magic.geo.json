@@ -1,0 +1,25 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.crossbow.magic",
+				"texture_width": 64.0,
+				"texture_height": 64.0
+			},
+			"bones": [
+				{
+					"name": "rightitem",
+					"texture_meshes": [
+						{
+							"position": [ 0.0, 15.0, -4.0 ],
+							"rotation": [ 90.0, 0.0, -49.0 ],
+							"texture": "default",
+							"scale": [0.25, 1, 0.25]
+						}
+					]
+				}
+			]
+		}
+	]
+}

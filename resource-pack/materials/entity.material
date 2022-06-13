@@ -1,0 +1,15 @@
+{
+    "materials": {
+        "version": "1.0.0",
+        "pony_magic": {
+            "vertexShader": "shaders/entity.vertex",
+            "vrGeometryShader": "shaders/entity.geometry",
+            "fragmentShader": "shaders/entity.fragment",
+            "msaaSupport": "Both",
+            "+defines": [ "USE_SKINNING", "USE_OVERLAY", "USE_COLOR_MASK" ],
+            "+states": [ "Blending" ],
+            "blendSrc": "SourceAlpha",
+            "blendDst": "One"
+        }
+    }
+}

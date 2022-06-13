@@ -1,0 +1,159 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:zombie_villager_v2",
+      "materials": {
+        "default": "zombie_villager_v2",
+        "masked": "zombie_villager_v2_masked",
+        "minelp.default": "zombie_villager_v2",
+        "minelp.masked": "zombie_villager_v2_masked",
+        "minelp.magic": "pony_magic"
+      },
+      "textures": {
+        "default": "textures/entity/zombie_villager2/zombie-villager",
+        "minelp.default": "textures/entity/zombie_villager/minelp.pony.zombie_villager",
+
+        // Biome Layer
+        "desert": "textures/entity/zombie_villager2/biomes/biome-desert-zombie",
+        "jungle": "textures/entity/zombie_villager2/biomes/biome-jungle-zombie",
+        "plains": "textures/entity/zombie_villager2/biomes/biome-plains-zombie",
+        "savanna": "textures/entity/zombie_villager2/biomes/biome-savanna-zombie",
+        "snow": "textures/entity/zombie_villager2/biomes/biome-snow-zombie",
+        "swamp": "textures/entity/zombie_villager2/biomes/biome-swamp-zombie",
+        "taiga": "textures/entity/zombie_villager2/biomes/biome-taiga-zombie",
+        "minelp.desert": "textures/entity/zombie_villager/biomes/desert",
+        "minelp.jungle": "textures/entity/zombie_villager/biomes/jungle",
+        "minelp.plains": "textures/entity/zombie_villager/biomes/plains",
+        "minelp.savanna": "textures/entity/zombie_villager/biomes/savanna",
+        "minelp.snow": "textures/entity/zombie_villager/biomes/snow",
+        "minelp.swamp": "textures/entity/zombie_villager/biomes/swamp",
+        "minelp.taiga": "textures/entity/zombie_villager/biomes/taiga",
+
+        // Profession Layer
+        "armorer": "textures/entity/zombie_villager2/professions/armorer",
+        "butcher": "textures/entity/zombie_villager2/professions/butcher",
+        "cartographer": "textures/entity/zombie_villager2/professions/cartographer",
+        "cleric": "textures/entity/zombie_villager2/professions/cleric",
+        "farmer": "textures/entity/zombie_villager2/professions/farmer",
+        "fisherman": "textures/entity/zombie_villager2/professions/fisherman",
+        "fletcher": "textures/entity/zombie_villager2/professions/fletcher",
+        "leatherworker": "textures/entity/zombie_villager2/professions/leatherworker",
+        "librarian": "textures/entity/zombie_villager2/professions/librarian",
+        "shepherd": "textures/entity/zombie_villager2/professions/shepherd",
+        "tool_smith": "textures/entity/zombie_villager2/professions/toolsmith",
+        "weapon_smith": "textures/entity/zombie_villager2/professions/weaponsmith",
+        "stonemason": "textures/entity/zombie_villager2/professions/stonemason",
+        "nitwit": "textures/entity/zombie_villager2/professions/nitwit",
+        "minelp.armorer": "textures/entity/zombie_villager/professions/armorer",
+        "minelp.butcher": "textures/entity/zombie_villager/professions/butcher",
+        "minelp.cartographer": "textures/entity/zombie_villager/professions/cartographer",
+        "minelp.cleric": "textures/entity/zombie_villager/professions/cleric",
+        "minelp.farmer": "textures/entity/zombie_villager/professions/farmer",
+        "minelp.fisherman": "textures/entity/zombie_villager/professions/fisherman",
+        "minelp.fletcher": "textures/entity/zombie_villager/professions/fletcher",
+        "minelp.leatherworker": "textures/entity/zombie_villager/professions/leatherworker",
+        "minelp.librarian": "textures/entity/zombie_villager/professions/librarian",
+        "minelp.shepherd": "textures/entity/zombie_villager/professions/shepherd",
+        "minelp.tool_smith": "textures/entity/zombie_villager/professions/toolsmith",
+        "minelp.weapon_smith": "textures/entity/zombie_villager/professions/weaponsmith",
+        "minelp.stonemason": "textures/entity/zombie_villager/professions/mason",
+        "minelp.nitwit": "textures/entity/zombie_villager/professions/nitwit",
+        
+        // Villager Skins For Plains And Savanna
+        "minelp.armorer.plains": "textures/entity/zombie_villager/pony/plains/armorer",
+        "minelp.butcher.plains": "textures/entity/zombie_villager/pony/plains/butcher",
+        "minelp.cartographer.plains": "textures/entity/zombie_villager/pony/plains/cartographer",
+        "minelp.cleric.plains": "textures/entity/zombie_villager/pony/plains/cleric",
+        "minelp.farmer.plains": "textures/entity/zombie_villager/pony/plains/farmer",
+        "minelp.fisherman.plains": "textures/entity/zombie_villager/pony/plains/fisherman",
+        "minelp.fletcher.plains": "textures/entity/zombie_villager/pony/plains/fletcher",
+        "minelp.leatherworker.plains": "textures/entity/zombie_villager/pony/plains/leatherworker",
+        "minelp.librarian.plains": "textures/entity/zombie_villager/pony/plains/librarian",
+        "minelp.shepherd.plains": "textures/entity/zombie_villager/pony/plains/shepherd",
+        "minelp.tool_smith.plains": "textures/entity/zombie_villager/pony/plains/toolsmith",
+        "minelp.weapon_smith.plains": "textures/entity/zombie_villager/pony/plains/weaponsmith",
+        "minelp.stonemason.plains": "textures/entity/zombie_villager/pony/plains/mason",
+        "minelp.nitwit.plains": "textures/entity/zombie_villager/pony/plains/nitwit",
+        
+        // Magic Colors
+        "minelp.magic_color_0":  "textures/magic/0",
+        "minelp.magic_color_1":  "textures/magic/1",
+        "minelp.magic_color_2":  "textures/magic/2",
+        "minelp.magic_color_3":  "textures/magic/3",
+        "minelp.magic_color_4":  "textures/magic/4",
+        "minelp.magic_color_5":  "textures/magic/5",
+        "minelp.magic_color_6":  "textures/magic/6",
+        "minelp.magic_color_7":  "textures/magic/7",
+        "minelp.magic_color_8":  "textures/magic/8",
+        "minelp.magic_color_9":  "textures/magic/9",
+        "minelp.magic_color_10": "textures/magic/10",
+        "minelp.magic_color_11": "textures/magic/11",
+        "minelp.magic_color_12": "textures/magic/12",
+        "minelp.magic_color_13": "textures/magic/13",
+        "minelp.magic_color_14": "textures/magic/14"
+      },
+      "geometry": {
+        "default": "geometry.zombie.villager_v2",
+        "minelp.default": "geometry.minelp.pony"
+      },
+      "scripts": {
+        "variables": {
+          "variable.minelp_ispony": "public"
+        },
+        "initialize": [
+          "variable.minelp_ispony = 1;"
+        ],
+        "pre_animation": [
+          "variable.minelp_ispony = 1;",
+          "variable.minelp.horn_type = 0;",
+          "variable.minelp.wing_type = 0;",
+          "variable.minelp.ear_type = 0;",
+          "variable.minelp.muzzle_type = 2;",
+          "variable.minelp.zebra_mane = 0;",
+          "variable.minelp.magic_color = 0;",
+          "variable.minelp.handedness = 0;",
+          "variable.minelp.tail_length = 1;",
+          "variable.movement_leg_angle = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 20;",
+          "variable.x_bob = Math.sin(query.life_time * 76.776372) * 5.865;",
+          "variable.z_bob = Math.cos(query.life_time * 93.13244) * 2.865 + 2.865;",
+          "variable.attack = Math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 57.3;",
+          "variable.attack2 = Math.sin(variable.attack_time * 180.0) * 57.3;",
+          "variable.num_professions = 14;",
+          "variable.profession_index = ((query.variant < variable.num_professions) ? query.variant : 0);",
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+        ],
+        "animate": [
+          "default"
+        ]
+      },
+      "animations": {
+        "default": "controller.animation.minelp.pony.default",
+        "default.arms": "controller.animation.minelp.pony.zombie.default.arms",
+        "show_movement.leftArm": "animation.minelp.pony.show_movement.leftArm",
+        "show_movement.rightArm": "animation.minelp.pony.show_movement.rightArm",
+        "show_movement.legs": "animation.minelp.pony.show_movement.legs",
+        "show_movement.tail": "animation.minelp.pony.show_movement.tail",
+        "show_attack.leftArm": "animation.minelp.pony.show_attack.leftArm",
+        "show_attack.rightArm": "animation.minelp.pony.show_attack.rightArm",
+        "bob.leftArm": "animation.minelp.pony.bob.leftArm",
+        "bob.rightArm": "animation.minelp.pony.bob.rightArm",
+        "bob.tail": "animation.minelp.pony.bob.tail",
+        "look_at_target": "animation.minelp.pony.look_at_target",
+		"big_head": "animation.minelp.pony.big_head"
+      },
+      "render_controllers": [
+        { "controller.render.zombie_villager_v2_base": "(variable.minelp_ispony ?? 0.0) != 1.0" },
+        { "controller.render.zombie_villager_v2_masked": "(variable.minelp_ispony ?? 0.0) != 1.0" },
+        { "controller.render.zombie_villager_pony_base": "(variable.minelp_ispony ?? 0.0) == 1.0" },
+        { "controller.render.zombie_villager_pony_masked": "(variable.minelp_ispony ?? 0.0) == 1.0" },
+        { "controller.render.minelp.pony.magic": "(variable.minelp_ispony ?? 0.0) == 1.0 && variable.minelp.horn_type >= 1.0" }
+      ],
+      "enable_attachables": true,
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 42
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.attack.positions": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [0, 0, 0]
+				}
+			}
+		},
+		"animation.player.attack.rotations": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [0, "variable.attack_body_rot_y", 0]
+				},
+				"leftarm": {
+					"rotation": ["(-(math.sin((1 - math.pow((1 - variable.attack_time), 4)) * 180) * 1.2 + math.sin(variable.attack_time * 180)) * 10.0) * (variable.minelp.horn_type == 0)", 0, 0]
+				},
+				"rightarm": {
+					"rotation": ["(-(math.sin((1 - math.pow((1 - variable.attack_time), 4)) * 180) * 1.2 + math.sin(variable.attack_time * 180)) * 30.0) * (variable.minelp.horn_type == 0)", "(-(math.sin((1 - math.pow((1 - variable.attack_time), 4)) * 180) ? (-90.0 * math.sin((1 - math.pow((1 - variable.attack_time), 4)) * 180)) + 30.0 : 0.0)) * (variable.minelp.horn_type == 0)", 0]
+				},
+				"rightItem": {
+					"rotation": ["(-(math.sin((1 - math.pow((1 - variable.attack_time), 4)) * 180) * 1.2 + math.sin(variable.attack_time * 180)) * 30.0) * (variable.minelp.horn_type > 0)", "(-(math.sin((1 - math.pow((1 - variable.attack_time), 4)) * 180) ? (-90.0 * math.sin((1 - math.pow((1 - variable.attack_time), 4)) * 180)) + 30.0 : 0.0)) * (variable.minelp.horn_type > 0)", 0]
+				}
+			}
+		},
+		"animation.player.base_pose.upside_down": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"position": [0, 8, 0],
+					"rotation": [0, 0, 180]
+				}
+			}
+		},
+		"animation.player.bob": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": [0, 0, "-((math.cos(query.life_time * 103.2) * 2.865) + 2.865)"]
+				},
+				"rightarm": {
+					"rotation": [0, 0, "(math.cos(query.life_time * 103.2) * 2.865) + 2.865"]
+				}
+			}
+		},
+		"animation.player.bob.stationary": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": [0, 0, "-((math.cos(query.life_time * 103.2) * 2.865) + 2.865)"]
+				},
+				"rightarm": {
+					"rotation": [0, 0, "(math.cos(query.life_time * 103.2) * 2.865) + 2.865"]
+				}
+			}
+		},
+		"animation.player.glide": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": ["variable.tcos0", 0, 0]
+				},
+				"leftLeg": {
+					"rotation": ["variable.tcos0 * -1.4", 0, 0]
+				},
+				"rightArm": {
+					"rotation": ["-variable.tcos0", 0, 0]
+				},
+				"rightLeg": {
+					"rotation": ["variable.tcos0 * 1.4", 0, 0]
+				},
+				"waist": {
+					"rotation": [-90, 0, 0]
+				}
+			}
+		},
+		"animation.player.look_at_target.inverted": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": ["-query.target_x_rotation", "-query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.player.look_at_target.ui": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.player.move.arms": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": ["variable.tcos0 * (variable.minelp_ispony == 0)", 0, 0]
+				},
+				"rightarm": {
+					"rotation": ["-variable.tcos0 * (variable.minelp_ispony == 0)", 0, 0]
+				}
+			}
+		},
+		"animation.player.move.legs": {
+			"loop": true,
+			"bones": {
+				"leftleg": {
+					"rotation": ["variable.tcos0 * -1.4 * (variable.minelp_ispony == 0)", 0, 0]
+				},
+				"rightleg": {
+					"rotation": ["variable.tcos0 * 1.4 * (variable.minelp_ispony == 0)", 0, 0]
+				}
+			}
+		},
+		"animation.player.sneaking" : {
+			"loop" : true,
+			"bones" : {
+				"body" : {
+					"position" : [ 0.0, "-2.0 * (variable.minelp_ispony == 0)", 0.0 ]
+				},
+				"head" : {
+					"position" : [ 0.0, "-1.0 * (variable.minelp_ispony == 0)", 0.0 ]
+				},
+				"leftarm" : {
+					"rotation" : [ "-5.7 * (variable.minelp_ispony == 0)", 0.0, 0.0 ]
+				},
+				"leftleg" : {
+					"rotation" : [ "-28.0 * (variable.minelp_ispony == 0)", 0.0, 0.0 ]
+				},
+				"rightarm" : {
+					"rotation" : [ "-5.7 * (variable.minelp_ispony == 0)", 0.0, 0.0 ]
+				},
+				"rightleg" : {
+					"rotation" : [ "-28.0 * (variable.minelp_ispony == 0)", 0.0, 0.0 ]
+				},
+				"root" : {
+					"position" : [ 0.0, "1.25 * (variable.minelp_ispony == 0)", "9.0 * (variable.minelp_ispony == 0)" ],
+					"rotation" : [ "(28.0 - this) * (variable.minelp_ispony == 0)", 0.0, 0.0 ]
+				}
+			}
+		}
+	}
+}

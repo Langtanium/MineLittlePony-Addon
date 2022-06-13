@@ -1,0 +1,12 @@
+{
+  "namespace": "pony_ui",
+  
+  "pony_image": {
+    "$alpha|default": 1.0,
+    "type": "image",
+    "layer": 1,
+    "texture": "textures/ui/pony_ui/pony",
+    "size": [ 8, 8 ],
+    "alpha": "$alpha"
+  },
+}
