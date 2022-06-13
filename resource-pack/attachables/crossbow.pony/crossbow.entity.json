@@ -1,0 +1,25 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "minecraft:crossbow",
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/no_item"
+      },
+      "geometry": {
+        "default": "geometry.crossbow_standby"
+      },
+      "scripts": {
+                "pre_animation": [
+                    "variable.anim_frame = (query.item_remaining_use_duration / query.item_max_use_duration);",
+                    "variable.anim_frame = math.min(((variable.anim_frame * variable.anim_frame) + variable.anim_frame * 2.0), 2.0);"
+                ]
+      },
+      "render_controllers": [ "controller.render.item_remove" ]
+    }
+  }
+}

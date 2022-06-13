@@ -1,0 +1,47 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "min_engine_version": "1.10.0",
+            "identifier": "minelp:crossbow_magic_color_14",
+            "item": { "minecraft:crossbow": "variable.minelp_ispony && variable.minelp.magic_color == 14" },
+            "materials": {
+                "default": "entity_alphatest",
+                "enchanted": "entity_alphatest_glint",
+                "magic": "pony_magic"
+            },
+            "textures": {
+                "default": "textures/items/crossbow_standby",
+                "crossbow_pulling_0": "textures/items/crossbow_pulling_0",
+                "crossbow_pulling_1": "textures/items/crossbow_pulling_1",
+                "crossbow_pulling_2": "textures/items/crossbow_pulling_2",
+                "crossbow_arrow": "textures/items/crossbow_arrow",
+                "crossbow_rocket": "textures/items/crossbow_firework",
+                "enchanted": "textures/misc/enchanted_item_glint",
+                "magic": "textures/magic/14"
+            },
+            "geometry": {
+                "default": "geometry.crossbow_standby",
+                "crossbow_pulling_0": "geometry.crossbow_pulling_0",
+                "crossbow_pulling_1": "geometry.crossbow_pulling_1",
+                "crossbow_pulling_2": "geometry.crossbow_pulling_2",
+                "crossbow_arrow": "geometry.crossbow_arrow",
+                "crossbow_rocket": "geometry.crossbow_rocket",
+				"minelp.default": "geometry.crossbowstandby",
+                "minelp.crossbow_pulling_0": "geometry.crossbow_pulling0",
+                "minelp.crossbow_pulling_1": "geometry.crossbow_pulling1",
+                "minelp.crossbow_pulling_2": "geometry.crossbow_pulling2",
+                "minelp.crossbow_arrow": "geometry.crossbowarrow",
+                "minelp.crossbow_rocket": "geometry.crossbowrocket",
+                "magic": "geometry.crossbow.magic"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "variable.anim_frame = (query.item_remaining_use_duration / query.item_max_use_duration);",
+                    "variable.anim_frame = math.min(((variable.anim_frame * variable.anim_frame) + variable.anim_frame * 2.0), 2.0);"
+                ]
+            },
+            "render_controllers": [ "controller.render.crossbow", "controller.render.crossbow.magic" ]
+        }
+    }
+}
