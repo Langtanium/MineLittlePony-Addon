@@ -30,7 +30,22 @@
 					"pivot": [-7.5, 11, -14]
 				},
 				{
+					"name": "shield",
+					"parent": "rightItem",
+					"pivot": [-7.5, 11, -14]
+				},
+				{
+					"name": "pole",
+					"parent": "rightItem",
+					"pivot": [-7.5, 11, -14]
+				},
+				{
 					"name": "leftItem",
+					"pivot": [7.5, 11, -14]
+				},
+				{
+					"name": "shieldl",
+					"parent": "leftItem",
 					"pivot": [7.5, 11, -14]
 				}
 			]
