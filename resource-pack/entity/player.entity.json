@@ -93,8 +93,9 @@
                     "root",
                     "show_movement.tail",
                     "bob.tail",
+					{ "long_neck": "variable.minelp_iszebra == 1"},
 					{ "seapony": "variable.minelp_isseapony == 1 && query.is_in_water" },
-                    { "shield.left": "variable.minelp_ispony == 1 && query.get_equipped_item_name('off_hand') == 'shield'" },
+                    { "shield.left": "variable.minelp_ispony == 1 && query.get_equipped_item_name('off_hand') == 'shield' && variable.minelp.horn_type == 0" },
                     { "show_movement.legs": "(variable.minelp.wing_type == 0 && variable.minelp_ispony == 1) || (query.is_on_ground * variable.minelp_ispony == 1)" },
                     { "show_movement.arms": "(variable.minelp.wing_type == 0 && variable.minelp_ispony == 1 && !variable.is_first_person) || (query.is_on_ground * variable.minelp_ispony == 1 && !variable.is_first_person)" },
                     { "bob.inverted": "!variable.is_first_person  && (variable.minelp_ispony ?? 0.0) == 1.0 && query.is_on_screen" },
@@ -106,6 +107,7 @@
                 ]
             },
             "animations": {
+				"long_neck": "animation.minelp.pony.long_neck",
 				"seapony": "animation.player.seapony",
                 "pony.sneak": "animation.player.pony.sneaking",
                 "bob.inverted": "animation.player.bob.inverted",

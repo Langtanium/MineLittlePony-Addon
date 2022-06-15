@@ -2,16 +2,19 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "minecraft:witch",
+      "identifier": "minecraft:guardian",
       "min_engine_version": "1.8.0",
       "materials": {
-        "default": "witch",
-        "minelp.default": "witch",
+        "default": "guardian",
+        "ghost": "guardian_ghost",
+        "minelp.default": "guardian",
         "minelp.magic": "pony_magic"
       },
       "textures": {
-        "default": "textures/entity/witch",
-        "minelp.default": "textures/entity/minelp.pony.witch",
+        "default": "textures/entity/guardian",
+        "elder": "textures/entity/guardian_elder",
+        "beam": "textures/entity/guardian_beam", 
+        "minelp.default": "textures/entity/minelp.seapony",
         "minelp.magic_color_0":  "textures/magic/0",
         "minelp.magic_color_1":  "textures/magic/1",
         "minelp.magic_color_2":  "textures/magic/2",
@@ -29,40 +32,12 @@
         "minelp.magic_color_14": "textures/magic/14"
       },
       "geometry": {
-        "default": "geometry.villager.witch.v1.8",
-        "minelp.default": "geometry.minelp.pony"
-      },
-      "scripts": {
-        "scale": "0.9375",
-        "variables": {
-          "variable.minelp_ispony": "public"
-        },
-        "initialize": [
-          "variable.minelp_ispony = 1;"
-        ],
-        "pre_animation": [
-          "variable.minelp_ispony = 1;",
-          "variable.minelp.horn_type = 0;",
-          "variable.minelp.wing_type = 0;",
-          "variable.minelp.ear_type = 0;",
-          "variable.minelp.muzzle_type = 2;",
-          "variable.minelp.zebra_mane = 1;",
-          "variable.minelp.magic_color = 0;",
-          "variable.minelp.handedness = 0;",
-          "variable.minelp.tail_length = 0.75;",
-          "variable.movement_leg_angle = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 20;",
-          "variable.x_bob = Math.sin(query.life_time * 76.776372) * 5.865;",
-          "variable.z_bob = Math.cos(query.life_time * 93.13244) * 2.865 + 2.865;",
-          "variable.attack = Math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 57.3;",
-          "variable.attack2 = Math.sin(variable.attack_time * 180.0) * 57.3;"
-        ],
-        "animate": [
-          "default",
-		  { "long_neck": "variable.minelp.zebra_mane == 1"}
-        ]
+        "default": "geometry.guardian.v1.8",
+        "ghost": "geometry.guardian",
+		"minelp.default": "geometry.minelp.pony.guardian"
       },
       "animations": {
-		"long_neck": "animation.minelp.pony.long_neck",
+		"seapony": "animation.minelp.pony.seapony",
         "default": "controller.animation.minelp.pony.default",
         "default.arms": "controller.animation.minelp.pony.default.arms",
         "show_movement.leftArm": "animation.minelp.pony.show_movement.leftArm",
@@ -77,14 +52,42 @@
         "look_at_target": "animation.minelp.pony.look_at_target",
         "big_head": "animation.minelp.pony.big_head"
       },
+      "scripts": {
+        "variables": {
+          "variable.minelp_ispony": "public"
+        },
+        "initialize": [
+          "variable.minelp_ispony = 1;"
+        ],
+        "pre_animation": [
+          "variable.minelp_ispony = 1;",
+          "variable.minelp.horn_type = 1;",
+          "variable.minelp.wing_type = 0;",
+          "variable.minelp.ear_type = 0;",
+          "variable.minelp.muzzle_type = 2;",
+          "variable.minelp.zebra_mane = 0;",
+          "variable.minelp.magic_color = 0;",
+          "variable.minelp.handedness = 0;",
+          "variable.minelp.tail_length = 0;",
+          "variable.movement_leg_angle = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 20;",
+          "variable.x_bob = Math.sin(query.life_time * 76.776372) * 5.865;",
+          "variable.z_bob = Math.cos(query.life_time * 93.13244) * 2.865 + 2.865;",
+          "variable.attack = Math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 57.3;",
+          "variable.attack2 = Math.sin(variable.attack_time * 180.0) * 57.3;"
+        ],
+        "animate": [
+          "default",
+		  "seapony"
+        ]
+      },
       "render_controllers": [
-        { "controller.render.witch": "(variable.minelp_ispony ?? 0.0) == 0.0" },
-        { "controller.render.minelp.pony": "(variable.minelp_ispony ?? 0.0) == 1.0" },
+		{ "controller.render.guardian": "(variable.minelp_ispony ?? 0.0) == 0.0" },
+		{ "controller.render.minelp.pony": "(variable.minelp_ispony ?? 0.0) == 1.0" },
         { "controller.render.minelp.pony.magic": "(variable.minelp_ispony ?? 0.0) == 1.0 && variable.minelp.horn_type >= 1.0" }
-      ],
+	  ],
       "spawn_egg": {
         "texture": "spawn_egg",
-        "texture_index": 17
+        "texture_index": 26
       }
     }
   }

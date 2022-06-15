@@ -14,10 +14,10 @@
       },
       "geometry": {
         "default": "geometry.player_head",
-        "steve": "geometry.player_head",
-        "skeleton": "geometry.mob_head",
-        "wither": "geometry.mob_head",
-        "zombie": "geometry.mob_head",
+        "steve": "geometry.minelp.pony_head",
+        "skeleton": "geometry.minelp.pony_head",
+        "wither": "geometry.minelp.pony_head",
+        "zombie": "geometry.minelp.pony_head",
         "creeper": "geometry.mob_head",
         "dragon": "geometry.dragon_head"
       }
