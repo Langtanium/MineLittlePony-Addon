@@ -17,9 +17,7 @@
             },
             "geometry": {
                 "default": "geometry.shield.r",
-                "default.l": "geometry.shield.l",
-                "magic": "geometry.shield.magic.r",
-				"magic.l": "geometry.shield.magic.l"
+                "default.l": "geometry.shield.l"
             },
             "scripts": {
                 "pre_animation": [
