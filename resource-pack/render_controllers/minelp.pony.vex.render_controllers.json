@@ -1,0 +1,15 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.minelp.pony.vex": {
+      "arrays": {
+        "textures": {
+          "Array.textures": [ "Texture.minelp.default", "Texture.minelp.charging" ]
+        }
+      },
+      "geometry": "Geometry.minelp.default",
+      "materials": [ { "*": "Material.minelp.default" } ],
+      "textures": [ "Array.textures[query.is_charging]" ]
+    }
+  }
+}

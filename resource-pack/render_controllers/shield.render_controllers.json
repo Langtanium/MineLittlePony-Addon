@@ -7,17 +7,27 @@
           "Array.geos": [ "Geometry.default.l", "Geometry.default" ]
          }
       },
-      "geometry": "Array.geos[query.get_equipped_item_name('main_hand') == 'shield']",
+      "geometry": "Array.geos[query.get_equipped_item_name == 'shield']",
+	  "part_visibility": [
+        { "*": false },
+        { "shield": true },
+		{ "shieldl": true }
+      ],
       "materials": [ { "*": "variable.is_enchanted ? material.enchanted : material.default" } ],
       "textures": [ "Texture.default", "Texture.enchanted" ]
     },
 	"controller.render.shield.magic": {
       "arrays": {        
         "geometries": {
-          "Array.geos": [ "Geometry.magic.l", "Geometry.magic" ]
+          "Array.geos": [ "Geometry.default.l", "Geometry.default" ]
          }
       },
-      "geometry": "Array.geos[query.get_equipped_item_name('main_hand') == 'shield']",
+      "geometry": "Array.geos[query.get_equipped_item_name == 'shield']",
+	   "part_visibility": [
+        { "*": false },
+        { "shieldMagic": true },
+		{ "shieldMagicOuter": true }
+      ],
       "materials": [ { "*": "Material.magic" } ],
       "textures": [ "Texture.magic" ],
       "ignore_lighting": false

@@ -1,0 +1,26 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.minelp.pony.strider": {
+		"arrays": {
+	        "textures": {
+          		"Array.base": [
+          			"Texture.minelp.default",
+          			"Texture.minelp.saddled"
+          		],
+          		"Array.suffocated": [
+          			"Texture.minelp.suffocated",
+          			"Texture.minelp.suffocated_saddled"
+          		]
+	        }
+      	},
+		"geometry": "Geometry.minelp.default",
+		"materials": [
+			{ "*": "Material.minelp.default" }
+		],
+		"textures": [
+			"query.is_shaking ? Array.suffocated[query.is_saddled] : Array.base[query.is_saddled]"
+		]
+    }
+  }
+}
