@@ -94,12 +94,6 @@
         }
       },
       {
-        "pony_button@general_section.pony_button": {
-          "$toggle_group_forced_index": "$pony_index",
-          "ignored": "(not $include_controls_and_settings_sections)"
-        }
-      },
-      {
         "accessibility_button@general_section.accessibility_button": {
           "$toggle_group_forced_index": "$accessibility_forced_index",
           "ignored": "(not $include_controls_and_settings_sections)"
@@ -117,7 +111,22 @@
           "ignored": "(not $include_controls_and_settings_sections)"
         }
       },
-
+      {
+        "spacer_pony": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "selector_group_label_pony@settings_common.selector_group_label": {
+          "text": "MineLP"
+        }
+      },
+       {
+        "pony_button@general_section.pony_button": {
+          "ignored": "(not $include_controls_and_settings_sections)"
+        }
+      },
       // the list of selection toggle buttons, add yours here...
       {
         "world_selector_pane@world_section.selector_pane_content": {
@@ -353,6 +362,7 @@
           "type": "stack_panel",
           "ignored": "(not $include_controls_and_settings_sections)",
           "controls": [
+            { "pony_section@general_section.pony_section": { "visible": false } },
             { "accessibility_section@general_section.accessibility_section": { "visible": false } },
             {
               "keyboard_and_mouse_section@controls_section.keyboard_and_mouse_section": {
