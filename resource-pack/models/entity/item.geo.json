@@ -18,8 +18,8 @@
 						{
 							"texture": "default",
 							"position": [0, -12, -3],
-							"rotation": [0, 45, 90],
-							"local_pivot": [-2, 0, 2]
+							"local_pivot": [4, -11, 10],
+							"scale": [0.8, 0.8, 0.8]
 						}
 					]
 				}

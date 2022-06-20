@@ -9,8 +9,7 @@
       },
       "bones": [
         {
-          "name": "pole",
-          "binding": "q.item_slot_to_bone_name(c.item_slot)",
+          "name": "rightItem",
           "pivot": [ 0.0, 24.0, 0.0 ],
           "cubes": [
             {
